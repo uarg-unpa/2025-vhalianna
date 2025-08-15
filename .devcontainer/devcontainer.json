@@ -1,0 +1,22 @@
+{
+  "name": "Prolog Classroom Template",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+  "features": {
+    "ghcr.io/devcontainers/features/github-cli:1": {}
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "arthurwang.vsc-prolog",  
+        "ms-vscode.makefile-tools" 
+      ],
+      "settings": {
+        "prolog.interpreterPath": "/usr/bin/swipl" 
+      }
+    }
+  },
+  "forwardPorts": [3000],  
+  "postCreateCommand": "swipl --version"  
+}
